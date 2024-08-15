@@ -143,7 +143,8 @@ function Navbar ({children}){
               <span className="sr-only">View notifications</span>
               <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" />
              </button>
-             <span className="inline-flex items-center rounded-xl bg-red-50 px-1 py-1 text-xxs font-medium text-red-700 ring-1 ring-inset ring-red-600/10 mb-7 -ml-3 z-10 h-4 w-4 justify-center">
+             <span className="inline-flex items-center rounded-xl bg-red-50 px-1 py-1 text-xs font-medium text-red-700 ring
+             -1 ring-inset ring-red-600/10 mb-7 -ml-3 z-10 h-4 w-4 justify-center">
         1
       </span>
           </div>
@@ -165,7 +166,7 @@ function Navbar ({children}){
 
     <header className="bg-white shadow">
       <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-gray-900"> The HG Vastra</h1>
       </div>
     </header>
     <main>
