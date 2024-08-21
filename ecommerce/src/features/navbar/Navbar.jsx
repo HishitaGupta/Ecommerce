@@ -1,6 +1,7 @@
 import React from 'react'
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom'
 
 const user = {
   name: 'Tom Cook',
@@ -29,14 +30,14 @@ function Navbar ({children}){
   return (
     <><div className="min-h-full">
     <Disclosure as="nav" className="bg-gray-800">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div >
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <img
                 alt="Your Company"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-8"
+                className="h-8 w-8 ml-2 "
               />
             </div>
             <div className="hidden md:block">
@@ -59,13 +60,14 @@ function Navbar ({children}){
           </div>
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6">
+              <Link to="/cart">
               <button
                 type="button"
                 className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
               >
                 <span className="absolute -inset-1.5" />
                 <span className="sr-only">View notifications</span>
-                <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" /></button>
+                <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" /></button></Link>
                 <span className="inline-flex items-center rounded-xl bg-red-50 px-1 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10 mb-7 -ml-3 z-10 h-4 w-4 justify-center" >
         1
       </span>
@@ -97,9 +99,9 @@ function Navbar ({children}){
               </Menu>
             </div>
           </div>
-          <div className="-mr-2 flex md:hidden">
+          <div className="mr-2 flex md:hidden">
             {/* Mobile menu button */}
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md bg-gray-800  text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 p-2">
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className="block h-6 w-6 group-data-[open]:hidden" />
@@ -131,18 +133,19 @@ function Navbar ({children}){
             <div className="flex-shrink-0">
               <img alt="" src={user.imageUrl} className="h-10 w-10 rounded-full" />
             </div>
-            <div className="ml-3">
+            <div className="ml-3 ">
               <div className="text-base font-medium leading-none text-white">{user.name}</div>
               <div className="text-sm font-medium leading-none text-gray-400">{user.email}</div>
             </div>
+            <Link to="/cart">
             <button
               type="button"
-              className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              className="relative ml-40 flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             >
               <span className="absolute -inset-1.5" />
               <span className="sr-only">View notifications</span>
               <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" />
-             </button>
+             </button></Link>
              <span className="inline-flex items-center rounded-xl bg-red-50 px-1 py-1 text-xs font-medium text-red-700 ring
              -1 ring-inset ring-red-600/10 mb-7 -ml-3 z-10 h-4 w-4 justify-center">
         1
